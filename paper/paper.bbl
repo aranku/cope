@@ -1,0 +1,129 @@
+\begin{thebibliography}{24}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio]{Bahdanau2014NeuralMT}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
+\newblock Neural machine translation by jointly learning to align and translate.
+\newblock \emph{CoRR}, abs/1409.0473, 2014.
+
+\bibitem[Collobert and Weston(2008)]{collobert2008unified}
+Ronan Collobert and Jason Weston.
+\newblock A unified architecture for natural language processing: Deep neural networks with multitask learning.
+\newblock In \emph{Proceedings of the 25th international conference on Machine learning}, pages 160--167, 2008.
+
+\bibitem[Dai et~al.(2019)Dai, Yang, Yang, Carbonell, Le, and Salakhutdinov]{Dai2019TransformerXLAL}
+Zihang Dai, Zhilin Yang, Yiming Yang, Jaime~G. Carbonell, Quoc~V. Le, and Ruslan Salakhutdinov.
+\newblock Transformer-xl: Attentive language models beyond a fixed-length context.
+\newblock In \emph{Annual Meeting of the Association for Computational Linguistics}, 2019.
+
+\bibitem[Dufter et~al.(2022)Dufter, Schmitt, and Sch{\"u}tze]{dufter2022position}
+Philipp Dufter, Martin Schmitt, and Hinrich Sch{\"u}tze.
+\newblock Position information in transformers: An overview.
+\newblock \emph{Computational Linguistics}, 48\penalty0 (3):\penalty0 733--763, 2022.
+
+\bibitem[Gehring et~al.(2017)Gehring, Auli, Grangier, Yarats, and Dauphin]{gehring2017convolutional}
+Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, and Yann~N Dauphin.
+\newblock Convolutional sequence to sequence learning.
+\newblock In \emph{International conference on machine learning}, pages 1243--1252. PMLR, 2017.
+
+\bibitem[Gu and Dao(2023)]{gu2023mamba}
+Albert Gu and Tri Dao.
+\newblock Mamba: Linear-time sequence modeling with selective state spaces.
+\newblock \emph{arXiv preprint arXiv:2312.00752}, 2023.
+
+\bibitem[Haviv et~al.(2022)Haviv, Ram, Press, Izsak, and Levy]{haviv2022transformer}
+Adi Haviv, Ori Ram, Ofir Press, Peter Izsak, and Omer Levy.
+\newblock Transformer language models without positional encodings still learn positional information.
+\newblock In \emph{Findings of the Association for Computational Linguistics: EMNLP}, 2022.
+
+\bibitem[Jiang et~al.(2023)Jiang, Sablayrolles, Mensch, Bamford, Chaplot, de~Las~Casas, Bressand, Lengyel, Lample, Saulnier, Lavaud, Lachaux, Stock, Scao, Lavril, Wang, Lacroix, and Sayed]{Jiang2023Mistral7}
+Albert~Qiaochu Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra~Singh Chaplot, Diego de~Las~Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, L'elio~Renard Lavaud, Marie-Anne Lachaux, Pierre Stock, Teven~Le Scao, Thibaut Lavril, Thomas Wang, Timoth{\'e}e Lacroix, and William~El Sayed.
+\newblock Mistral 7b.
+\newblock \emph{ArXiv}, abs/2310.06825, 2023.
+
+\bibitem[Liu et~al.(2024)Liu, Ash, Goel, Krishnamurthy, and Zhang]{liu2024exposing}
+Bingbin Liu, Jordan Ash, Surbhi Goel, Akshay Krishnamurthy, and Cyril Zhang.
+\newblock Exposing attention glitches with flip-flop language modeling.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Merity et~al.(2017)Merity, Xiong, Bradbury, and Socher]{merity2016pointer}
+Stephen Merity, Caiming Xiong, James Bradbury, and Richard Socher.
+\newblock Pointer sentinel mixture models.
+\newblock In \emph{International Conference on Learning Representations}, 2017.
+
+\bibitem[Neishi and Yoshinaga(2019)]{neishi2019relation}
+Masato Neishi and Naoki Yoshinaga.
+\newblock On the relation between position information and sentence length in neural machine translation.
+\newblock In \emph{Proceedings of the 23rd Conference on Computational Natural Language Learning (CoNLL)}, 2019.
+
+\bibitem[Press et~al.(2022)Press, Smith, and Lewis]{press2021train}
+Ofir Press, Noah Smith, and Mike Lewis.
+\newblock Train short, test long: Attention with linear biases enables input length extrapolation.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever, et~al.]{radford2019language}
+Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et~al.
+\newblock Language models are unsupervised multitask learners.
+\newblock \emph{OpenAI blog}, 1\penalty0 (8):\penalty0 9, 2019.
+
+\bibitem[Raffel et~al.(2020)Raffel, Shazeer, Roberts, Lee, Narang, Matena, Zhou, Li, and Liu]{raffel2020exploring}
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter~J Liu.
+\newblock Exploring the limits of transfer learning with a unified text-to-text transformer.
+\newblock \emph{Journal of machine learning research}, 21\penalty0 (140):\penalty0 1--67, 2020.
+
+\bibitem[Sennrich et~al.(2016)Sennrich, Haddow, and Birch]{sennrich2015neural}
+Rico Sennrich, Barry Haddow, and Alexandra Birch.
+\newblock Neural machine translation of rare words with subword units.
+\newblock In \emph{Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, 2016.
+
+\bibitem[Shaw et~al.(2018)Shaw, Uszkoreit, and Vaswani]{shaw2018self}
+Peter Shaw, Jakob Uszkoreit, and Ashish Vaswani.
+\newblock Self-attention with relative position representations.
+\newblock In \emph{North American Chapter of the Association for Computational Linguistics}, 2018.
+
+\bibitem[Su et~al.(2024)Su, Ahmed, Lu, Pan, Bo, and Liu]{su2024roformer}
+Jianlin Su, Murtadha Ahmed, Yu~Lu, Shengfeng Pan, Wen Bo, and Yunfeng Liu.
+\newblock Roformer: Enhanced transformer with rotary position embedding.
+\newblock \emph{Neurocomputing}, 568:\penalty0 127063, 2024.
+
+\bibitem[Sukhbaatar et~al.(2015)Sukhbaatar, Szlam, Weston, and Fergus]{Sukhbaatar2015EndToEndMN}
+Sainbayar Sukhbaatar, Arthur Szlam, Jason Weston, and Rob Fergus.
+\newblock End-to-end memory networks.
+\newblock In \emph{Neural Information Processing Systems}, 2015.
+
+\bibitem[Touvron et~al.(2023{\natexlab{a}})Touvron, Lavril, Izacard, Martinet, Lachaux, Lacroix, Rozi{\`e}re, Goyal, Hambro, Azhar, Rodriguez, Joulin, Grave, and Lample]{Touvron2023LLaMAOA}
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timoth{\'e}e Lacroix, Baptiste Rozi{\`e}re, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, and Guillaume Lample.
+\newblock Llama: Open and efficient foundation language models.
+\newblock \emph{ArXiv}, abs/2302.13971, 2023{\natexlab{a}}.
+
+\bibitem[Touvron et~al.(2023{\natexlab{b}})Touvron, Martin, Stone, Albert, Almahairi, Babaei, Bashlykov, Batra, Bhargava, Bhosale, Bikel, Blecher, Ferrer, Chen, Cucurull, Esiobu, Fernandes, Fu, Fu, Fuller, Gao, Goswami, Goyal, Hartshorn, Hosseini, Hou, Inan, Kardas, Kerkez, Khabsa, Kloumann, Korenev, Koura, Lachaux, Lavril, Lee, Liskovich, Lu, Mao, Martinet, Mihaylov, Mishra, Molybog, Nie, Poulton, Reizenstein, Rungta, Saladi, Schelten, Silva, Smith, Subramanian, Tan, Tang, Taylor, Williams, Kuan, Xu, Yan, Zarov, Zhang, Fan, Kambadur, Narang, Rodriguez, Stojnic, Edunov, and Scialom]{Touvron2023Llama2O}
+Hugo Touvron, Louis Martin, Kevin~R. Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, Daniel~M. Bikel, Lukas Blecher, Cristian~Cant{\'o}n Ferrer, Moya Chen, Guillem Cucurull, David Esiobu, Jude Fernandes, Jeremy Fu, Wenyin Fu, Brian Fuller, Cynthia Gao, Vedanuj Goswami, Naman Goyal, Anthony~S. Hartshorn, Saghar Hosseini, Rui Hou, Hakan Inan, Marcin Kardas, Viktor Kerkez, Madian Khabsa, Isabel~M. Kloumann, A.~V. Korenev, Punit~Singh Koura, Marie-Anne Lachaux, Thibaut Lavril, Jenya Lee, Diana Liskovich, Yinghai Lu, Yuning Mao, Xavier Martinet, Todor Mihaylov, Pushkar Mishra, Igor Molybog, Yixin Nie, Andrew Poulton, Jeremy Reizenstein, Rashi Rungta, Kalyan Saladi, Alan Schelten, Ruan Silva, Eric~Michael Smith, R.~Subramanian, Xia Tan, Binh Tang, Ross Taylor, Adina Williams, Jian~Xiang Kuan, Puxin Xu, Zhengxu Yan, Iliyan Zarov, Yuchen Zhang, Angela Fan, Melanie Kambadur, Sharan Narang, Aurelien Rodriguez, Robert Stojnic, Sergey Edunov, and
+  Thomas Scialom.
+\newblock Llama 2: Open foundation and fine-tuned chat models.
+\newblock \emph{ArXiv}, abs/2307.09288, 2023{\natexlab{b}}.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock \emph{Advances in neural information processing systems}, 30, 2017.
+
+\bibitem[Wang et~al.(2019)Wang, Ma, Liu, and Tang]{wang2019r}
+Zhiwei Wang, Yao Ma, Zitao Liu, and Jiliang Tang.
+\newblock R-transformer: Recurrent neural network enhanced transformer.
+\newblock \emph{arXiv preprint arXiv:1907.05572}, 2019.
+
+\bibitem[Weston et~al.(2015)Weston, Chopra, and Bordes]{Weston2014MemoryN}
+Jason Weston, Sumit Chopra, and Antoine Bordes.
+\newblock Memory networks.
+\newblock In \emph{3rd International Conference on Learning Representations, {ICLR} 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings}, 2015.
+
+\bibitem[Zhao et~al.(2023)Zhao, Feng, Feng, Qin, and Liu]{zhao2023length}
+Liang Zhao, Xiaocheng Feng, Xiachong Feng, Bin Qin, and Ting Liu.
+\newblock Length extrapolation of transformers: A survey from the perspective of position encoding.
+\newblock \emph{arXiv preprint arXiv:2312.17044}, 2023.
+
+\end{thebibliography}

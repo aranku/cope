@@ -1,0 +1,20 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (3,3) (0,0) -- (0,3) coordinate[midway] (a);
+
+\node[left of=a,draw] {test};
+
+\foreach \i in {0,...,3} {
+    \draw (\i, 4) rectangle (\i+1,5) +(-0.5,-0.5) node (n\i) {\i};
+}
+
+\node[right of=n3,draw] {test};
+
+\end{tikzpicture}
+
+\end{document}

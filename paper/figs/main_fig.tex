@@ -1,0 +1,97 @@
+% \documentclass[tikz,border=10pt]{standalone}
+% \usepackage{tikz}
+% \usetikzlibrary{patterns}
+% \usetikzlibrary{positioning}
+
+% \begin{document}
+
+\definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
+\definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
+
+\begin{tikzpicture}
+
+% Define styles
+\tikzset{
+    context/.style={draw, fill=bleudefrance!20},
+    position/.style={draw, fill=white},
+    gates/.style={draw, fill=green!20},
+    axis/.style={draw, thick},
+    attention/.style={draw, preaction={fill, white}, pattern=north west lines},
+}
+
+\def\strings{{"Alice", "was", "tired", ".", "She", "tried", "reading", ".", "A", "rabb", "-it", "came"}}
+\def\gates{{0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0}}
+\def\positions{{2, 2, 2, 2, 1, 1, 1, 1, 0, 0, 0, 0}}
+
+\def\boxw{1.2}
+\def\boxh{0.7}
+\def\xgap{0.1}
+
+\def\rightlblx{12*\boxw+0.1}
+
+\foreach \i in {0,...,11} {
+    \draw [context] (\boxw*\i,0) rectangle +(\boxw,\boxh) ++(0.5*\boxw,0.5*\boxh-0.1) node[anchor=base] (context\i) {\pgfmathparse{\strings[\i]}\pgfmathresult};
+}
+\node [anchor=east,font=\bfseries] at (-0.1,0.5*\boxh) {Context};
+\node[anchor=west,align=left] at (\rightlblx+0.5,0.5*\boxh) (current) {current\\token at $i$};
+\draw [<-] (12*\boxw+0.2,0.5*\boxh) -- (node cs:name=current);
+
+\begin{scope}[yshift=-\boxh cm -0.7cm]
+    \path[rounded corners,fill=red!10] (-2,-\boxh-0.5) rectangle (\boxw*12+2.5,\boxh+0.5);
+    \path(-2,-\boxh-0.4) -- (-2,\boxh+0.4) coordinate[midway] (tokenpanel);
+    \node [left=0.1 of tokenpanel,anchor=east] {\rotatebox{90}{\large Relative PE}};
+    \begin{scope}[yshift=0.2cm]
+        % POSITIONS
+        \foreach \i in {0,...,11} {
+            \pgfmathtruncatemacro{\pos}{11 - \i}
+            \draw [position] (\boxw*\i,0) rectangle +(\boxw,\boxh) +(0.5*\boxw,0.5*\boxh) node (pos\i) {\pos};
+        }
+        \node [anchor=east,align=right,font=\bfseries] at (-0.1,0.5*\boxh) {Position};
+        \node[anchor=west] at (\rightlblx,0.5*\boxh) {$p_{ij}=i-j$};
+    \end{scope}
+    \begin{scope}[yshift=-\boxh cm -0.2cm]
+        % ATTENTION
+        \node [anchor=east,font=\bfseries] at (-.1,\boxh/2) {Attention};
+        \path [attention] (3*\boxw,0) .. controls +(\boxw*3,0) .. (\boxw*12,\boxh) -- (\boxw*12,0) -- cycle;
+        \draw [<-,axis] (0,0) -- ++(\boxw*12,0);
+        \draw [->,axis] (\boxw*12,0) -- +(0,\boxh+0.2);
+        \node[anchor=west,align=left] at (\rightlblx+0.5,0.5*\boxh) (current) {gradual \\decay};
+        \draw [<-] (12*\boxw+0.2,0.5*\boxh) -- (node cs:name=current);
+    \end{scope}
+\end{scope}
+
+\begin{scope}[yshift=-5cm]
+    \path[rounded corners,fill=arylideyellow!30] (-2,-\boxh-0.5) rectangle (\boxw*12+2.5,2*\boxh+0.8);
+    \path(-2,-\boxh-0.4) -- (-2,2*\boxh+0.8) coordinate[midway] (copepanel);
+    \node [anchor=north, left=0.1 of copepanel] {\rotatebox{90}{\large CoPE}};
+    \begin{scope}[yshift=\boxh cm + 0.5cm]
+        % GATES
+        \foreach \i in {0,...,11} {
+            \draw [gates] (\boxw*\i,0) rectangle +(\boxw,\boxh) +(0.5*\boxw,0.5*\boxh) node (gate\i) {\pgfmathparse{\gates[\i]}\pgfmathresult};
+        }
+        \node [anchor=east,align=right,font=\bfseries] at (-.1,\boxh/2) {Gates};
+        \node[anchor=west] at (\rightlblx,0.5*\boxh) {$g_{ij}=\sigma(\vec{q}_i^\top \vec{k}_j)$};
+    \end{scope}
+    \begin{scope}[yshift=0.2cm]
+        % POSITION
+        \node [anchor=east,align=right,font=\bfseries] at (-.1,\boxh/2) {Position};
+        \foreach \i in {0,...,11} {
+            \draw [position] (\boxw*\i,0) rectangle +(\boxw,\boxh) +(0.5*\boxw,0.5*\boxh) node (cope\i) {\pgfmathparse{\positions[\i]}\pgfmathresult};
+        }
+        \node[anchor=west] at (\rightlblx,0.5*\boxh) {$\displaystyle p_{ij}=\sum_{k=j}^i(g_{ik})$};        
+    \end{scope}
+    \begin{scope}[yshift=-\boxh cm -0.2cm]
+        \node [anchor=east,font=\bfseries] at (-.1,\boxh/2) {Attention};
+        \path [attention] (8*\boxw,0) -- +(0,\boxh) -- (\boxw*12,\boxh) -- (\boxw*12,0) -- cycle;
+        \draw [<-,axis] (0,0) -- ++(\boxw*12,0);
+        \draw [->,axis] (\boxw*12,0) -- +(0,\boxh+0.2);
+        \node[anchor=west,align=left] at (\rightlblx+0.5,0.5*\boxh) (current) {attend to\\position 0};
+        \draw [<-] (12*\boxw+0.2,0.5*\boxh) -- (node cs:name=current);        
+    \end{scope}
+\end{scope}
+
+\end{tikzpicture}
+
+% \end{document}
